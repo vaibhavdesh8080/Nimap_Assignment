@@ -1,0 +1,71 @@
+/* navbar.css */
+
+nav {
+  background-color: #2c3e50; /* Dark background color */
+  padding: 15px 20px; /* Padding around the nav */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullets */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-left {
+  display: flex; /* Flexbox for left-aligned items */
+}
+
+nav li {
+  margin: 0 15px; /* Spacing between menu items */
+}
+
+nav a {
+  text-decoration: none; /* Remove underline from links */
+  color: #ecf0f1; /* Light text color */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #1abc9c; /* Change color on hover */
+}
+
+nav form {
+  display: flex; /* Use flexbox for the search form */
+  align-items: center; /* Center items vertically */
+}
+
+.search-form {
+  display: flex; /* Flexbox for search form */
+}
+
+nav input[type="text"] {
+  padding: 8px; /* Padding inside the input */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 10px; /* Spacing between input and button */
+  font-size: 16px; /* Font size */
+}
+
+nav button {
+  padding: 8px 15px; /* Padding inside the button */
+  background-color: #1abc9c; /* Button color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+nav button:hover {
+  background-color: #16a085; /* Darker shade on hover */
+}
+.navbar-brand
+{
+float:right;
+}

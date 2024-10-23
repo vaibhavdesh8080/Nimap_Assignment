@@ -1,0 +1,107 @@
+/* General styles */
+.movie-details {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  button {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Header styling */
+  .movie-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .movie-poster {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  }
+  
+  .movie-info {
+    margin-left: 20px;
+    max-width: 600px;
+  }
+  
+  .movie-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-info p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  /* Cast grid */
+  .cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .cast-card {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .cast-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .cast-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  
+  .character-name {
+    font-style: italic;
+    color: #ff4d4d;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .movie-header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .movie-info {
+      margin-left: 0;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .movie-poster {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  

@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+  background-color: #0d1117; /* Sleek dark background */
+  color: #e6e6e6; /* Softer white text for readability */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Homepage Container */
+.homepage-container {
+  padding-top: 40px;
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+  flex-wrap: wrap;
+  background-color: #161b22; /* Slightly lighter container background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Movies Grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 30px;
+  flex: 4;
+}
+
+/* Movie Cards */
+.movie-card {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease; /* Smooth scaling and shadow */
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.movie-card h2 {
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: #b0bec5; /* Softer text color for title */
+}
+
+.movie-card:hover {
+  transform: scale(1.08); /* Slightly larger hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Movie Details Container */
+.movie-details-container {
+  flex: 1;
+  max-width: 380px;
+  padding: 25px;
+  background-color: #22303c; /* Slightly brighter for contrast */
+  color: #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .homepage-container {
+    flex-direction: column;
+  }
+
+  .movie-details-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 15px;
+}
+
+.pagination button {
+  padding: 12px 20px;
+  background-color: #3498db; /* Modern blue button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
