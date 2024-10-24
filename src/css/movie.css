@@ -1,4 +1,4 @@
-/* General styles */
+
 .movie-details {
     background-color: #1c1c1c;
     color: #fff;
@@ -24,7 +24,7 @@
     background-color: #cc0000;
   }
   
-  /* Header styling */
+  
   .movie-header {
     display: flex;
     flex-wrap: wrap;
@@ -54,7 +54,7 @@
     margin-bottom: 10px;
   }
   
-  /* Cast grid */
+  
   .cast-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -86,7 +86,7 @@
     color: #ff4d4d;
   }
   
-  /* Responsive adjustments */
+  
   @media screen and (max-width: 768px) {
     .movie-header {
       flex-direction: column;

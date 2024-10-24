@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { searchMovies } from '../api/movieApi';
-import MovieDetails from './Movie';  // Import the MovieDetails component
-import '../css/home.css';  // Import your CSS for styling
+import MovieDetails from './Movie';  
+import '../css/home.css';  
 
 const SearchedMovie = () => {
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);  // State to track selected movie
+  const [selectedMovie, setSelectedMovie] = useState(null);  
   const location = useLocation();
   const query = new URLSearchParams(location.search).get('q');
 
@@ -24,11 +24,11 @@ const SearchedMovie = () => {
   }, [query]);
 
   const handleMovieClick = (movie) => {
-    setSelectedMovie(movie);  // Set the selected movie when clicked
+    setSelectedMovie(movie); 
   };
 
   const handleCloseDetails = () => {
-    setSelectedMovie(null);  // Close the movie details view
+    setSelectedMovie(null);  
   };
 
   return (
@@ -39,15 +39,15 @@ const SearchedMovie = () => {
         <MovieDetails movie={selectedMovie} onClose={handleCloseDetails} />
       ) : (
         <div>
-          {movies.length === 0 ? (  // Check if movies array is empty
-            <p>No movies found for "{query}".</p>  // Message if no movies are found
+          {movies.length === 0 ? (  
+            <p>No movies found for "{query}".</p>  
           ) : (
             <div className="movies-grid">
               {movies.map(movie => (
                 <div 
-                  key={movie.id}  // Added key prop for unique identification
+                  key={movie.id}  
                   className="movie-card" 
-                  onClick={() => handleMovieClick(movie)}  // Handle movie click
+                  onClick={() => handleMovieClick(movie)}  
                 >
                   <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                   <h2>{movie.title}</h2>

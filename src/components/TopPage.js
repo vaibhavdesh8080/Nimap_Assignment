@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { getTopRatedMovies } from '../api/movieApi';
-import MovieDetails from './Movie';  // Import the MovieDetails component
-import '../css/home.css';  // Import your CSS for styling
+import MovieDetails from './Movie';  
+import '../css/home.css';  
 
 const TopPage = () => {
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);  // State to track selected movie
-  const [currentPage, setCurrentPage] = useState(1);  // Current page
-  const moviesPerPage = 10;  // Number of movies to show per page
+  const [selectedMovie, setSelectedMovie] = useState(null);  
+  const [currentPage, setCurrentPage] = useState(1);  
+  const moviesPerPage = 10;  
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -23,29 +23,29 @@ const TopPage = () => {
   }, []);
 
   const handleMovieClick = (movie) => {
-    setSelectedMovie(movie);  // Set the selected movie when clicked
+    setSelectedMovie(movie);  
   };
 
   const handleCloseDetails = () => {
-    setSelectedMovie(null);  // Close the movie details view
+    setSelectedMovie(null);
   };
 
-  // Pagination logic
-  const indexOfLastMovie = currentPage * moviesPerPage;  // Index of the last movie
-  const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;  // Index of the first movie
-  const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);  // Get current movies
+  
+  const indexOfLastMovie = currentPage * moviesPerPage;  
+  const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;  
+  const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);  
 
-  const totalPages = Math.ceil(movies.length / moviesPerPage);  // Total number of pages
+  const totalPages = Math.ceil(movies.length / moviesPerPage);  
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);  // Increment page
+      setCurrentPage(currentPage + 1);  
     }
   };
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);  // Decrement page
+      setCurrentPage(currentPage - 1);  
     }
   };
 
@@ -61,7 +61,7 @@ const TopPage = () => {
               <div 
                 key={movie.id} 
                 className="movie-card" 
-                onClick={() => handleMovieClick(movie)}  // Handle movie click
+                onClick={() => handleMovieClick(movie)}  
               >
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                 <h2>{movie.title}</h2>
